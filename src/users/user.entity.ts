@@ -26,8 +26,8 @@ export class User {
   @Column({ default: false, type: 'boolean' })
   enable2FA: boolean;
 
-  // @Column()
-  // apiKey: string;
+  @Column()
+  apiKey: string;
 
   /**
    * A user can create many playLists

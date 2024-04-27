@@ -54,11 +54,12 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "firstName": "ashvin",
-    "lastName": "manwar",
-    "email": "ashvin@gmail.com",
+    "firstName": "ashvin1",
+    "lastName": "manwar1",
+    "email": "ashvin1@gmail.com",
     "password": "12345678"
 }
+### API Key ashvin 1:fe97bf43-215f-436d-959b-7f3ff15c5c6a
 
 ### Signup Artist
 
@@ -119,4 +120,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzaHZpb
 
 ### Access Profile
 GET http://localhost:3000/auth/profile
-Authorization: Bearer
+Authorization: Bearer fe97bf43-215f-436d-959b-7f3ff15c5c6a
