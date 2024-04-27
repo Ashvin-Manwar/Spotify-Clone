@@ -97,3 +97,26 @@ Content-Type: application/json
 ### Profile
 GET http://localhost:3000/profile
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjIsImFydGlzdElkIjoxLCJpYXQiOjE3MTQxNTM5MzUsImV4cCI6MTcxNDI0MDMzNX0.DLGEveGM6rMt0yd73rI_tev-7TWHHWK3nGWwcyZb9Ns
+
+
+### Enable 2FA
+GET http://localhost:3000/auth/enable-2fa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzaHZpbkBnbWFpbC5jb20iLCJ1c2VySWQiOjEsImlhdCI6MTcxNDE2MzczMSwiZXhwIjoxNzE0MjUwMTMxfQ.XppdZ0T4zLISXLFvjFNwZH_s2Le6eYr_qUM5pAGTyM4
+
+### Validate 2FA Token
+POST http://localhost:3000/auth/validate-2fa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzaHZpbkBnbWFpbC5jb20iLCJ1c2VySWQiOjEsImlhdCI6MTcxNDE2MzczMSwiZXhwIjoxNzE0MjUwMTMxfQ.XppdZ0T4zLISXLFvjFNwZH_s2Le6eYr_qUM5pAGTyM4
+Content-Type: application/json
+
+{
+    "token": "411293"
+}
+
+
+### Disable 2FA
+GET http://localhost:3000/auth/disable-2fa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzaHZpbkBnbWFpbC5jb20iLCJ1c2VySWQiOjEsImlhdCI6MTcxNDE2MzczMSwiZXhwIjoxNzE0MjUwMTMxfQ.XppdZ0T4zLISXLFvjFNwZH_s2Le6eYr_qUM5pAGTyM4
+
+### Access Profile
+GET http://localhost:3000/auth/profile
+Authorization: Bearer
