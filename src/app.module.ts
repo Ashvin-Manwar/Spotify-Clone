@@ -14,6 +14,7 @@ import {  typeOrmAsyncConfig } from 'db/data-source';
 import { SeedModule } from './seed/seed.module';
 import { ConfigModule } from '@nestjs/config';
 import configuration from './config/configuration';
+import { validate } from 'env.validation';
 
 // const devConfig = { port: 3000 };
 // const proConfig = { port: 4000 };
@@ -24,6 +25,7 @@ import configuration from './config/configuration';
       envFilePath: ['.env.development', '.env.production'],
       isGlobal: true,
       load: [configuration],
+      validate:validate
     }),
     TypeOrmModule.forRootAsync(typeOrmAsyncConfig),
     SongsModule,

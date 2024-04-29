@@ -4,17 +4,24 @@ import { ValidationPipe } from '@nestjs/common';
 import { SeedService } from './seed/seed.service';
 import { ConfigService } from '@nestjs/config';
 
+declare const module:any
+
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule)
   const configService= app.get(ConfigService)
   
   app.useGlobalPipes(new ValidationPipe())
   /**
    * You can enable the seeding here
   */
- // const seedService = app.get(SeedService);
- // await seedService.seed();
- const PORT = configService.get<number>('port');
-  await app.listen(PORT);
+ // const seedService = app.get(SeedService)
+ // await seedService.seed()
+ const PORT = configService.get<number>('port')
+  await app.listen(PORT)
+
+  if (module.hot) {
+    module.hot.accept()
+    module.hot.dispose(() => app.close())
+  }
 }
 bootstrap();
