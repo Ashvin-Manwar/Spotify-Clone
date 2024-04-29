@@ -121,3 +121,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzaHZpb
 ### Access Profile
 GET http://localhost:3000/auth/profile
 Authorization: Bearer fe97bf43-215f-436d-959b-7f3ff15c5c6a
+
+### Test Env
+GET http://localhost:3000/auth/test
