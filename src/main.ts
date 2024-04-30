@@ -41,7 +41,7 @@ SwaggerModule.setup('api', app, document);
 
  const PORT = configService.get<number>('port')
   await app.listen(PORT)
-  console.log(configService.get<string>('NODE_ENV'));
+  // console.log(configService.get<string>('NODE_ENV'));
 
 
   if (module.hot) {
